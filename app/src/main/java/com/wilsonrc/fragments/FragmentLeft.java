@@ -43,11 +43,17 @@ public class FragmentLeft extends Fragment {
                     // Get right Fragment object.
                     Fragment rightFragment = fragmentManager.findFragmentById(R.id.fragmentRight);
 
-                    // Get the TextView object in right Fragment.
-                    final TextView rightFragmentTextView = (TextView)rightFragment.getView().findViewById(R.id.fragmentRightTextView);
+                    if(rightFragment==null)
+                    {
+                        RightActivity rightActivity = new RightActivity();
+                        rightActivity.startActivity(getContext(), "You click Android button.");
+                    }else {
+                        // Get the TextView object in right Fragment.
+                        final TextView rightFragmentTextView = (TextView) rightFragment.getView().findViewById(R.id.fragmentRightTextView);
 
-                    // Set text in right Fragment TextView.
-                    rightFragmentTextView.setText("You click Android button.");
+                        // Set text in right Fragment TextView.
+                        rightFragmentTextView.setText("You click Android button.");
+                    }
                 }
             });
 
