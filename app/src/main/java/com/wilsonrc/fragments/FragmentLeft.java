@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.AppCompatImageButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,7 @@ public class FragmentLeft extends Fragment {
         if(retView!=null)
         {
             // Click this button will show the text in right fragment.
-            Button androidButton = (Button)retView.findViewById(R.id.fragmentLeftButtonAndroid);
+            AppCompatImageButton androidButton = (AppCompatImageButton)retView.findViewById(R.id.fragmentLeftButtonAndroid);
             androidButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -52,7 +53,7 @@ public class FragmentLeft extends Fragment {
 
 
             // Click this button will show a Toast popup.
-            Button iosButton = (Button)retView.findViewById(R.id.fragmentLeftButtonIos);
+            AppCompatImageButton iosButton = (AppCompatImageButton)retView.findViewById(R.id.fragmentLeftButtonIos);
             iosButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -62,7 +63,7 @@ public class FragmentLeft extends Fragment {
 
 
             // Click this button will show an alert dialog.
-            Button windowsButton = (Button)retView.findViewById(R.id.fragmentLeftButtonWindows);
+            AppCompatImageButton windowsButton = (AppCompatImageButton)retView.findViewById(R.id.fragmentLeftButtonWindows);
             windowsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
